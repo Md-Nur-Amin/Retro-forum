@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+</head>
+
+
+<body class="mx-auto my-auto lg:mt-12 ">
+  <header class="lg:mx-20">
+    <!-- Navbar Start -->
+    <nav class="mb-10 lg:mb-14">
+      <div class="navbar bg-base-100">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">daisyUI</a>
+        </div>
+        <div class="flex-none">
+
+          <div class="gap-x-3 h-auto w-auto ">
+            <div tabindex="0" role="button" class="btn border-[#12132D08] btn-circle h-8 w-8 lg:h-14 lg:w-14">
+              <div class="tooltip tooltip-bottom" data-tip="Home">
+                <img class=" h-4 w-4 lg:w-[19.5px] lg:h-[18.28px]" src="images/home.png" alt="">
+              </div>
+            </div>
+
+            <div tabindex="0" role="button" class="btn btn-circle border-[#12132D08]  h-8 w-8 lg:h-14 lg:w-14">
+              <div class="tooltip tooltip-bottom" data-tip="Edit">
+                <img class="h-4 w-4 lg:w-[19.5px] lg:h-[18.28px]" src="images/pen.png" alt="">
+              </div>
+            </div>
+
+            <div tabindex="0" role="button" class="btn btn-circle border-[#12132D08]  h-8 w-8 lg:h-14 lg:w-14">
+              <div class="tooltip tooltip-bottom" data-tip="Add">
+                <img class="h-4 w-4 lg:w-[19.5px] lg:h-[18.28px]" src="images/add.png" alt="">
+              </div>
+            </div>
+
+            <div tabindex="0" role="button" class="btn btn-circle border-[#12132D08] h-8 w-8 lg:h-14 lg:w-14">
+              <div class="tooltip tooltip-bottom" data-tip="Flag">
+                <img class="h-4 w-4 lg:w-[19.5px] lg:h-[18.28px]" src="images/flag.png" alt="">
+              </div>
+            </div>
+
+            <div tabindex="0" role="button" class="btn btn-circle bg-[#797DFC] lg:h-14 lg:w-36">
+              <div class="tooltip tooltip-bottom" data-tip="Sign In">
+                <h2 class="text-white  text-[12px] lg:font-bold lg:text-xl ">Sign In</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+    <!-- Navbar end -->
+
+    <!-- Banner start -->
+    <section class="mx-2 rounded-[32px] bg-[#12132D] lg:h-[550px] lg:w-[1170px] pb-10 ">
+
+      <div class="flex gap-x-24 grid lg:grid-cols-2">
+        <div class="">
+          <h1 class=" pt-5 pl-20 lg:pt-[99px] lg:pl-[100px] font-extrabold lg:text-6xl text-white">Welcome to the <br>
+            <span class="text-blue-300"> ReTro</span> Forum</h1>
+
+          <h1 class="pt-5 text-white text-[12px] pl-[50px] lg:pl-[100px] lg:text-xl">Share your favorite opinion and win
+            and <br> forum coffee mug!</h1>
+
+          <div class="mx-auto my-8 lg:ml-24 lg:mt-8 ">
+            <label class="rounded-[50px] input input-bordered flex items-center gap-2">
+              <input type="text" class="grow" placeholder="Search" />
+              <button class="p-4 font-bold text-white badge badge-info bg-[#797DFC] ">Search</button>
+            </label>
+          </div>
+        </div>
+
+
+
+        <div class="mx-auto my-auto p-12 lg:mt-32 bg-white rounded-[32px] lg:h-[288px] lg:w-[371px] gap-4 ">
+
+          <div class="flex gap-x-14  lg:gap-x-[60px]">
+            <p class="text-[#12132DCC] lg:text-2xl font-medium">Registered Users</p>
+            <p class="text-[#12132DCC] lg:text-2xl font-medium">01</p>
+          </div>
+          <div class="flex gap-x-[130px] lg:gap-x-[170px] py-3">
+            <p class="text-[#12132DCC] lg:text-2xl font-medium">Forum</p>
+            <p class="text-[#12132DCC] lg:text-2xl font-medium">05</p>
+          </div>
+          <div class="flex gap-x-[133px] lg:gap-x-[175px]">
+            <p class="text-[#12132DCC] lg:text-2xl font-medium">Topics</p>
+            <p class="text-[#12132DCC] lg:text-2xl font-medium">01</p>
+          </div>
+          <div class="flex gap-x-[128px] lg:gap-x-[165px] py-3">
+            <p class="text-[#12132DCC] lg:text-2xl font-medium">Replies</p>
+            <p class="text-[#12132DCC] lg:text-2xl font-medium">01</p>
+          </div>
+
+        </div>
+      </div>
+      <img class="absolute bottom-[-130px] left-50" src="images/bgbanner.png" alt="">
+    </section>
+    <!-- Banner end -->
+
+  </header>
+
+  <section class="my-20 lg:mx-20">
+    <div class=" text-center">
+      <h2 class="text-xl lg:text-4xl font-extrabold text-[#12132D]">Let’s Discuss</h2>
+      <h2 class=" mt-6 text-xs lg:text-xl text-[#12132D99]">Yes, you can run unit tests and view the results directly
+        within the app. The integrated testing features allow for a streamlined .</h2>
+    </div>
+  </section>
+
+
+  <main class="lg:mx-20 ml-2">
+
+
+    <div>
+      <div
+        class=" grid lg:flex lg:gap-x-10 pt-10 pb-20 pr-20 rounded-3xl border-[#797DFC1A] bg-[#797DFC1A] lg:h-[300px] lg:w-[772px]">
+        <div>
+          <img class="ml-16 rounded-2xl h-[100px] w-[150px] lg:h-[72px] lg:w-[72px]" src="images/joinforum.png" alt="">
+        </div>
+
+        <div>
+          <div class="lg:flex   ml-16 lg:ml-0 mt-5 lg:gap-x-5">
+            <p class="font-medium text-[#12132DCC] text-sm text-center"># Music</p>
+            <p class="font-medium text-[#12132DCC] text-sm text-center">Author : Awlad Hossain</p>
+          </div>
+
+          <div>
+            <p class="flex ml-16 lg:ml-0 my-3 font-bold text-[#12132D] text-[14px] lg:text-xl">10 Kids Unaware of Their
+              Halloween Costume</p>
+            <p class="flex ml-16 lg:ml-0 text-[#12132D99] text-[12px] lg:text-base lg:font-[400]">It’s one thing to
+              subject yourself to ha Halloween costume mishap because, hey that’s your prerogative</p>
+            <hr class="flex ml-16 lg:ml-0 bg-black border-dashed my-5">
+          </div>
+
+          <div class="flex gap-x-3  ml-[50px] lg:ml-0">
+            <img class="w-[18px] h-[18px] lg:w-[21px] lg:h-[19px]" src="images/comment.png" alt="">
+            <p class="lg:mr-7 text-[#12132D99] text-[12px] lg:text-base">560</p>
+            <img class="w-[18px] h-[18px] lg:w-[21px]" src="images/eye.png" alt="">
+            <p class="lg:mr-7 text-[#12132D99] text-[12px] lg:text-base">1568</p>
+            <img class="w-[18px] h-[18px] lg:w-[21px]" src="images/clock.png" alt="">
+            <p class="text-[#12132D99] text-[12px] lg:text-base">5 min</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+    <div>
+
+    </div>
+  </main>
+
+
+  <section class="my-20 lg:mx-20">
+    <div class=" text-center">
+      <h2 class="text-xl lg:text-4xl font-extrabold text-[#12132D]">Latest Posts</h2>
+      <h2 class="mx-5 lg:mx-[250px] mt-6 text-xs lg:text-xl text-[#12132D99]">Yes, you can run unit tests and view the
+        results directly within the app. The integrated testing features allow for a streamlined .</h2>
+    </div>
+  </section>
+
+  <!-- Latest post API section -->
+  <section class="my-20 lg:mx-20">
+    <div id="post-container" class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-2">
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+  <footer class="w-full mt-24">
+    <footer class="footer footer-center lg:p-10 bg-gray-50 text-primary-content ">
+      <aside class="p-12 lg:p-24">
+        <h1 class="text-[#12132D] font-extrabold lg:text-4xl">ReTro</h1>
+        <p class=" font-bold text-[#12132DB3] my-6">
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots <br> in a piece of classical
+          Latin literature from 45 BC </p>
+
+        <div class="flex justify-center gap-x-8 mb-10">
+          <img class="w-[16px] h-[18px]" src="images/twitter.png" alt="">
+          <img class="w-[12px] h-[18px]" src="images/facebook.png" alt="">
+          <img class="w-[16px] h-[18px]" src="images/twitter.png" alt="">
+          <img class="w-[16px] h-[18px]" src="images/gitHUb.png" alt="">
+        </div>
+
+        <hr class="bg-black border-dashed my-5">
+
+        <p class=" text-[16px] text-[#12132D80] my-10 text-[#12132D]"> 2024, All right reserved</p>
+      </aside>
+    </footer>
+
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
