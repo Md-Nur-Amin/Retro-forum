@@ -126,7 +126,7 @@
       <div
         class=" my-6 grid lg:flex lg:gap-x-10 pt-10 pb-20 pr-20 rounded-3xl border-[#797DFC1A] bg-[#797DFC1A] lg:h-[300px] lg:w-[772px]">
         <div>
-          <div class="bg-[#10B981] h-[12px] w-[12px] rounded-full ml-32"></div>
+          <span class=" indicator-item badge ${newPost.isActive? "bg-green-600" : "bg-red-600"}"></span>
           <img class="ml-16 rounded-2xl h-[100px] w-[150px] lg:h-[72px] lg:w-[72px]" src="images/joinforum.png" alt="">
           
         </div>
@@ -155,7 +155,7 @@
             <img class="w-[18px] h-[18px] lg:w-[21px]" src="images/clock.png" alt="">
             <p class="text-[#12132D99] text-[12px] lg:text-base">5 min</p>
             
-            <button class=" lg:ml-[200px]  btn-circle h-[28px] w-[28px]">
+            <button class="button lg:ml-[200px]  btn-circle h-[28px] w-[28px]">
               <img src="images/msg_box.png" alt="">
             </button>
 
@@ -171,7 +171,7 @@
         <p class="text-[#12132D] font-bold lg:text-xl">Title</p>
         <div class="flex">
           <img src="images/double-check.png" alt="">
-          <p class="text-[#12132D99] text-base">Mark as read <span>(0)</span></p>
+          <p class="text-[#12132D99] text-base">Mark as read <span id="cnt">(0)</span></p>
         </div>
       </div>
 
@@ -182,9 +182,24 @@
 
 
     </div>
-
-
   </main>
+
+
+  <section class="my-20 mx-auto lg:mx-20 w-[1170px] ">
+    <div class="bg-[#12132D] p-24 rounded-[32px] flex grid-cols-2 lg:grid-cols-1">
+
+      <div class="">
+        <p class="text-[#FFFFFF] font-extrabold lg:text-[40px]">Join Our Forum</p>
+        <p class="my-10 mr-20 text-white font-medium lg:text-[18px]">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
+        <button class="font-bold lg:text-xl bg-[#797DFC] text-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg rounded-r-full">Registered Now</button>
+      </div>
+
+      <div class="border-dashed border-2 border-y-white p-5">
+        <img src="images/joinforum.png" alt="">
+      </div>
+
+    </div>
+  </section>
 
 
   <section class="my-20 lg:mx-20">
@@ -231,6 +246,7 @@
   </footer>
 
   <script src="script.js"></script>
+  
 </body>
 
 </html>

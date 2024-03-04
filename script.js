@@ -29,10 +29,12 @@ const displayPost = data =>{
   })
 
 }
-
 latestPost();
 
 
+
+
+// All post start
 const allPost = async() =>{
   const res2 = await fetch('https://openapi.programming-hero.com/api/retro-forum/posts')
   const newData = await res2.json();
@@ -49,7 +51,7 @@ const displayAllPost = allNewPost =>{
     
     allPostCard.innerHTML = `
     <div>
-    
+    <span class="ml-32 badge ${newPost.isActive? "bg-green-600" : "bg-red-600"}"></span>
     <img class="ml-16 rounded-2xl h-[100px] w-[150px] lg:h-[72px] lg:w-[72px]" src="${newPost.image}" alt="">
   </div>
 
@@ -74,7 +76,7 @@ const displayAllPost = allNewPost =>{
 
       <img class="w-[18px] h-[18px] lg:w-[21px]" src="images/clock.png" alt="">
       <p class="text-[#12132D99] text-[12px] lg:text-base">${newPost.posted_time}</p>
-      <button class=" lg:ml-[200px] btn btn-circle h-[28px] w-[28px]">
+      <button class="button lg:ml-[200px] btn btn-circle h-[28px] w-[28px]">
       <img src="images/msg_box.png" alt="">
     </button>
     </div>
@@ -82,15 +84,108 @@ const displayAllPost = allNewPost =>{
     `
     allPostContainer.appendChild(allPostCard)
   })
-
 }
+
+// all post end
 
 // Search button 
 
-const searchButton = () =>{
-  const searchField = document.getElementById('search-field')
-  const searchText = searchField.value;
-  console.log(searchText)
-}
+// const searchButton = () =>{
+//   const searchField = document.getElementById('search-field')
+//   const searchText = searchField.value;
+//   console.log(searchText)
+// }
 
+// 
 allPost();
+
+ const buttn = document.getElementsByClassName('button')
+ document.addEventListener("DOMContentLoaded", function() {
+  const buttons = document.querySelectorAll('.button');
+  let count = 0;
+  buttons.forEach(btn => {
+    btn.addEventListener('click', function() {
+            count++;
+            document.getElementById('cnt').textContent = count;
+    })
+
+})
+ })
+
+
+
+
+
+
+
+
+// New
+ const displayPostData = (postData) => {
+  const discussPosts = document.getElementById('all-post-container');
+  discussPosts.innerHTML = '';
+  if (postData.length === 0) {
+      discussPosts.innerHTML = '<h1 class="text-black mulish font-black text-4xl">Something Wrong!!!</h1>';
+  }
+  postData.forEach(post => {
+      const postId = post.id;
+      const postCategory = post.category;
+      const authorImg = post.image;
+      let isActive = 'bg-[#FF3434]';
+      if(post.isActive) {
+          isActive='bg-[#10B981]'
+      }
+      const postAuthor = post.author.name;
+      const postTitle = post.title;
+      const postDescription = post.description;
+      const commentCount = post.comment_count;
+      const viewCount = post.view_count;
+      const postedTime = post.posted_time;
+      const div = document.createElement('div');
+      div.innerHTML = `
+          <div class="flex flex-col lg:flex-col p-10 mt-[30px]">
+              <div class="flex flex-col lg:flex-col rounded-lg border bg-gray-100 p-8 ">
+                  <!-- Music -->
+                  <div class="flex flex-row gap-6">
+                      <div class="indicator">
+                          <div class="grid w-16 h-16 bg-base-300 place-items-center rounded-xl">
+                              <img src="${authorImg}">
+                              <span class="absolute ${isActive} rounded-[50%] -top-1 -right-1 size-[18px] border-[2px] border-white "></span>
+                          </div>
+                      </div>
+                      <div class="flex flex-col">
+                          <div class="flex flex-row gap-5 inter text-[#12132D]">
+                              <p>#${postCategory}</p>
+                              <p>Author: <span> ${postAuthor} </span></p>
+                          </div>
+                          <div class="mt-3">
+                              <h1 class="mulish3 text-xl">${postTitle}</h1>
+                              <p class="inter mt-2">${postDescription}</p>
+                          </div>
+                          <hr class="border mt-5 w-[500px] border-gray-400">
+                          <div>
+                              <div class="flex flex-row gap-10 mt-8">
+                                  <div class="flex flex-row  gap-10">
+                                      <div class="flex flex-row gap-3">
+                                          <i class="fa-regular fa-message"><span class="inter ml-2">${commentCount}</span></i>
+                                      </div>
+                                      <div class="flex flex-row">
+                                          <i class="fa-regular fa-eye"> <span class="inter ml-2">${viewCount}</span> </i>
+                                      </div>
+                                      <div class="flex flex-row">
+                                          <i class="fa-regular fa-clock"><span class="inter ml-2">${postedTime}</span> </i>
+                                      </div>
+                                  </div>
+                                  <div class="ml-40 mt-[-8px]">
+                                      <button onclick="markRead('${postTitle?.replace (/'/g, '')}','${viewCount}')" class="btn-circle "><img src="images/email.png" alt=""></button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      `;
+      discussPosts.appendChild(div);
+  });
+}
+displayPostData()
