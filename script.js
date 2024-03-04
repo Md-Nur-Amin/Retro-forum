@@ -97,7 +97,6 @@ const searchButton = () =>{
   console.log(searchText)
 }
 
-
  const buttn = document.getElementsByClassName('button')
  document.addEventListener("DOMContentLoaded", function() {
   const buttons = document.querySelectorAll('.button');
